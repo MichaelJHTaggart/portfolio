@@ -254,134 +254,74 @@ export default function PrimarySearchAppBar() {
 
     return (
         <div className={classes.grow}>
-            <div className={classes.root}>
-                <CssBaseline />
-                <AppBar
-                    position="fixed"
-                    className={clsx(classes.appBar, {
-                        [classes.appBarShift]: open,
-                    })}
-                >
-                    <Toolbar>
-                        <IconButton
-                            color="inherit"
-                            aria-label="open drawer"
-                            onClick={handleDrawerOpen}
-                            edge="start"
-                            className={clsx(classes.menuButton, {
-                                [classes.hide]: open,
-                            })}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Drawer
-                            variant="permanent"
-                            className={clsx(classes.drawer, {
-                                [classes.drawerOpen]: open,
-                                [classes.drawerClose]: !open,
-                            })}
-                            classes={{
-                                paper: clsx({
-                                    [classes.drawerOpen]: open,
-                                    [classes.drawerClose]: !open,
-                                }),
-                            }}
-                        >
-                            <div className={classes.toolbar}>
-                                <IconButton onClick={handleDrawerClose}>
-                                    {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-                                </IconButton>
-                            </div>
-                            <Divider />
-                            <List>
-                                {['Home', 'Store', 'About Me'].map((text, index) => (
-                                    <ListItem button key={text}>
-                                        <ListItemIcon>{index === 0 ? <HomeIcon /> : index === 1 ? <ShoppingCartIcon /> : <InfoIcon />}
-                                        </ListItemIcon>
-                                        <ListItemText primary={text} />
-                                    </ListItem>
-                                ))}
-                            </List>
-                            <Divider />
-                            <List>
-                                {['LinkedIn', 'GitHub', 'Xing'].map((text, index) => (
-                                    <ListItem button key={text}>
-                                        <ListItemIcon>{index === 0 ? <LinkedInIcon /> : index === 1 ? <GitHubIcon /> : <InfoIcon />}</ListItemIcon>
-                                        <ListItemText primary={text} />
-                                    </ListItem>
-                                ))}
-                            </List>
-                        </Drawer>
-                        <main className={classes.content}>
-                            <div className={classes.toolbar} />
-                        </main>
+            <AppBar position="static" >
+                <Toolbar >
 
 
 
-                        <Typography className={classes.title} variant="h6" noWrap>
-                            Web Developer
+                    <Typography className={classes.title} variant="h6" noWrap>
+                        Web Developer
                     </Typography>
-                        <div className={classes.search}>
-                            <div className={classes.searchIcon}>
-                                <SearchIcon />
-                            </div>
-                            <InputBase
-                                placeholder="Search…"
-                                classes={{
-                                    root: classes.inputRoot,
-                                    input: classes.inputInput,
-                                }}
-                                inputProps={{ 'aria-label': 'search' }}
-                            />
+                    <div className={classes.search}>
+                        <div className={classes.searchIcon}>
+                            <SearchIcon />
                         </div>
-                        <div className={classes.grow} />
-                        <div className={classes.sectionDesktop}>
-                            <Button
-                                color="disabled"
-                                size="large"
-                                className={classes.button}
-                                startIcon={<TranslateIcon />}
-                                endIcon={<ExpandMoreIcon />}
-                            >
-                                Translate
+                        <InputBase
+                            placeholder="Search…"
+                            classes={{
+                                root: classes.inputRoot,
+                                input: classes.inputInput,
+                            }}
+                            inputProps={{ 'aria-label': 'search' }}
+                        />
+                    </div>
+                    <div className={classes.grow} />
+                    <div className={classes.sectionDesktop}>
+                        <Button
+                            color="disabled"
+                            size="large"
+                            className={classes.button}
+                            startIcon={<TranslateIcon />}
+                            endIcon={<ExpandMoreIcon />}
+                        >
+                            Translate
                     </Button>
-                            <IconButton aria-label="show 4 new messages" color="inherit">
-                                <Badge badgeContent={4} color="secondary">
-                                    <ChatIcon />
-                                </Badge>
-                            </IconButton>
-                            <IconButton aria-label="show 17 new items" color="inherit">
-                                <Badge badgeContent={17} color="secondary">
-                                    <ShoppingCartIcon />
-                                </Badge>
-                            </IconButton>
-                            <IconButton
-                                edge="end"
-                                aria-label="account of current user"
-                                aria-controls={menuId}
-                                aria-haspopup="true"
-                                onClick={handleProfileMenuOpen}
-                                color="inherit"
-                            >
-                                <AccountCircle />
-                            </IconButton>
-                        </div>
-                        <div className={classes.sectionMobile}>
-                            <IconButton
-                                aria-label="show more"
-                                aria-controls={mobileMenuId}
-                                aria-haspopup="true"
-                                onClick={handleMobileMenuOpen}
-                                color="inherit"
-                            >
-                                <MoreIcon />
-                            </IconButton>
-                        </div>
-                    </Toolbar>
-                </AppBar>
-                {renderMobileMenu}
-                {renderMenu}
-            </div>
-        </div>
+                        <IconButton aria-label="show 4 new messages" color="inherit">
+                            <Badge badgeContent={4} color="secondary">
+                                <ChatIcon />
+                            </Badge>
+                        </IconButton>
+                        <IconButton aria-label="show 17 new items" color="inherit">
+                            <Badge badgeContent={17} color="secondary">
+                                <ShoppingCartIcon />
+                            </Badge>
+                        </IconButton>
+                        <IconButton
+                            edge="end"
+                            aria-label="account of current user"
+                            aria-controls={menuId}
+                            aria-haspopup="true"
+                            onClick={handleProfileMenuOpen}
+                            color="inherit"
+                        >
+                            <AccountCircle />
+                        </IconButton>
+                    </div>
+                    <div className={classes.sectionMobile}>
+                        <IconButton
+                            aria-label="show more"
+                            aria-controls={mobileMenuId}
+                            aria-haspopup="true"
+                            onClick={handleMobileMenuOpen}
+                            color="inherit"
+                        >
+                            <MoreIcon />
+                        </IconButton>
+                    </div>
+                </Toolbar>
+            </AppBar >
+            { renderMobileMenu}
+            { renderMenu}
+        </div >
     );
 }
