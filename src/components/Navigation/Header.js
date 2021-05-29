@@ -292,7 +292,7 @@ export default function PrimarySearchAppBar() {
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
                         <Button
-                            color="disabled"
+                            color="grey"
                             size="large"
                             className={classes.button}
                             startIcon={<TranslateIcon />}
