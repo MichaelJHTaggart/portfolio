@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import SendIcon from '@material-ui/icons/Send';
 import { TextField } from '@material-ui/core';
 
-
 const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
@@ -76,7 +75,7 @@ export default function ContactForm() {
         />
 
         <Button
-          onClick={() => console.log("You clicked me")}
+          onClick={handleSubmit}
           variant="contained"
           color="primary"
           size="large"
