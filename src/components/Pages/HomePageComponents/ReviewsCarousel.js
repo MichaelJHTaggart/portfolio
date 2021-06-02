@@ -23,7 +23,7 @@ const tutorialSteps = [
   {
     label: 'Freelance website done for BurlMountain',
     imgPath:
-      BurlMountain,
+      BurlMountain",
   },
   {
     label: 'A project where I made a functioning slot machine',
