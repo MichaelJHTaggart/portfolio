@@ -10,45 +10,39 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import Grid from '@material-ui/core/Grid'
 
-import BurlMountain from '.../assets/BurlMountain'
-import Gambler from '.../assets/Gambler'
-import HandleWhile from '.../assets/HandleWhile'
-import LemonProp from '.../assets/LemonProp'
-import Me from '.../assets/Me'
-import Portfolio from '.../assets/Portfolio'
+// import BurlMountain from '.../assets/BurlMountain'
+// import Gambler from '.../assets/Gambler'
+// import HandleWhile from '.../assets/HandleWhile'
+// import LemonProp from '.../assets/LemonProp'
+// import Me from '.../assets/Me'
+// import Portfolio from '.../assets/Portfolio'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
     label: 'Freelance website done for BurlMountain',
-    imgPath:
-      BurlMountain",
+    // imgPath: BurlMountain,
   },
   {
     label: 'A project where I made a functioning slot machine',
-    imgPath:
-      Gambler,
+    // imgPath: Gambler,
   },
   {
     label: 'A group project where we styled and built a website that helps manage properties',
-    imgPath:
-      LemonProp,
+    // imgPath: LemonProp,
   },
   {
     label: 'A website I built to function as a stopwatch',
-    imgPath:
-      HandleWhile,
+    // imgPath: HandleWhile,
   },
   {
     label: 'My first portfolio website',
-    imgPath:
-      Portfolio,
+    // imgPath: Portfolio,
   },
   {
     label: '',
-    imgPath:
-      Me,
+    // imgPath: Me,
   },
 ];
 
@@ -120,14 +114,14 @@ function SwipeableTextMobileStepper() {
           nextButton={
             <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
               Next
-             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+              {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
             </Button>
           }
           backButton={
             <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
               {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-             Back
-           </Button>
+              Back
+            </Button>
           }
         />
       </div>
